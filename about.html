@@ -3,96 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <title>studio501 — About</title>
-  <link rel="icon" href="/favicon.ico?v=99" sizes="any">
-  <link rel="icon" type="image/png" href="/favicon.png?v=99">
+
+  <link rel="icon" href="/favicon.ico?v=120" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png?v=120">
 
   <style>
-    body {
+    body{
       margin: 48px;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #111;
+      background:#fff;
+      color:#111;
     }
 
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 56px;
+    .site-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:56px;
     }
 
-    .logo {
-      font-size: 14px;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      color: #111;
+    .logo{
+      font-size:14px;
+      letter-spacing:0.04em;
+      text-decoration:none;
+      color:#111;
     }
 
-    .nav a {
-      font-size: 13px;
-      text-decoration: none;
-      color: #111;
-      margin-left: 18px;
+    .nav a{
+      font-size:13px;
+      text-decoration:none;
+      color:#111;
+      margin-left:18px;
     }
 
-    .nav a.active {
-      text-decoration: underline;
-      text-underline-offset: 4px;
+    .nav a.active{
+      text-decoration:underline;
+      text-underline-offset:4px;
     }
 
-    /* ---- About layout ---- */
-    .about-grid {
-      display: grid;
+    /* ---- Contact block (center) ---- */
+    .contact{
+      max-width: 720px;
+      margin: 0 auto 96px;
+      text-align:center;
+      font-size:13px;
+      line-height:1.8;
+    }
+
+    .contact .label{
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#666;
+      margin-bottom:10px;
+    }
+
+    .contact a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,0.2);
+    }
+
+    /* ---- Lists ---- */
+    .lists{
+      max-width: 960px;
+      margin: 0 auto;
+      display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
-      align-items: start;
+      align-items:start;
     }
 
-    .section {
-      margin-bottom: 56px;
+    .section-title{
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#666;
+      margin-bottom:18px;
     }
 
-    .kicker {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 24px;
+    ul{
+      margin:0;
+      padding-left:18px;
+      font-size:13px;
+      line-height:1.75;
+      color:#222;
     }
 
-    .role {
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 13px;
-      line-height: 1.7;
-      color: #222;
-    }
-
-    .people {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px 48px;
-      font-size: 13px;
-      color: #222;
-    }
-
-    .people .name {
-      margin-bottom: 6px;
-    }
-
-    .muted {
-      color: #666;
-    }
-
-    @media (max-width: 900px) {
-      body { margin: 28px; }
-      .about-grid { grid-template-columns: 1fr; gap: 48px; }
-      .people { grid-template-columns: 1fr; }
+    @media (max-width: 900px){
+      body{ margin:28px; }
+      .lists{ grid-template-columns:1fr; gap:56px; }
+      .contact{ margin-bottom:72px; }
     }
   </style>
 </head>
@@ -101,31 +102,55 @@
   <header class="site-header">
     <a href="/" class="logo">studio501</a>
     <nav class="nav">
-      <a href="/" >Projects</a>
+      <a href="/">Projects</a>
       <a href="/about.html" class="active">About</a>
     </nav>
   </header>
 
-  <main class="about-grid">
-    <!-- LEFT COLUMN -->
+  <!-- Center contact block -->
+  <section class="contact">
+    <div class="label">Office</div>
+    <div><a href="https://studio501seoul.com" target="_blank" rel="noopener">studio501seoul.com</a></div>
+    <div><a href="mailto:astudio501@naver.com">astudio501@naver.com</a></div>
+    <div>(00000)</div>
+    <div>Seoul, Republic of Korea</div>
+    <div>서울 강서구 공항대로213(보타닉파크타워2) 801호</div>
+  </section>
+
+  <!-- Awards + Competition -->
+  <main class="lists">
     <section>
-      <div class="section">
-        <div class="kicker">OFFICE</div>
-
-        <div class="role"><strong>김민규</strong> <span class="muted">/ 건축사</span></div>
-        <ul>
-          <li>2006–2008 혜천대학(현,대전과학기술대학교) 실내건축디자인</li>
-          <li>2008–2011 충남대학교 건축학</li>
-          <li>2015-2020 (주)피에이건축사사무소 근무</li>
-          <li>2020–현재 건축사사무소 스튜디오501 소장</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <div class="kicker">AWARDS</div>
-        <ul>
-          <li>2025 경기도교육청 공간재구조화 최우수시설 선정(덕양중)</li>
-        </ul>
-      </div>
+      <div class="section-title">Awards</div>
+      <ul>
+        <li>2025 경기도공간재구조화 최우수-덕양중학교</li>
+      </ul>
     </section>
 
+    <section>
+      <div class="section-title">Competition</div>
+      <ul>
+        <li>2025 부용초 공간재구조화 리모델링 현상설계 5위</li>
+        <li>2025 마장고 공간재구조화 리모델링 현상설계 2위</li>
+        <li>2025 장평중 그린스마트미래학교 리모델링 5위</li>
+        <li>2025 신남초 본관동 공간재구조화 개축 현상설계 3위</li>
+        <li>2025 금당초 본관동 재난위험시설 개축 현상설계 3위</li>
+        <li>2024 하성고 기숙사 증축 현상설계 5위</li>
+        <li>2024 삼상초 공간재구조화 리모델링 당선</li>
+        <li>2024 전곡중 공간재구조화 리모델링 현상설계 2위</li>
+        <li>2024 평창지역자활센터 현상설계 4위</li>
+        <li>2024 원덕초 그린스마트미래학교 증,개축 현상설계 2위</li>
+        <li>2023 성남서중 급식실 증축 현상설계 5위</li>
+        <li>2022 덕양중 그린스마트미래학교 현상설계 당선</li>
+        <li>2022 파주초 그린스마트미래학교 현상설계 4위</li>
+        <li>2022 세마중 교실증축 현상설계 3위</li>
+        <li>2022 포곡중 급식소 증축 현상설계 3위</li>
+        <li>2022 창신초 교사증축 현상설계 3위</li>
+        <li>2021 개림초 다목적강당 및 급식실 증축 현상설계 4위</li>
+        <li>2021 가양도서관 분관 리모델링 현상설계 5위</li>
+        <li>2021 김포시 국궁장 현상설계 3위</li>
+        <li>2021 부안예술공방 조성사업 현상설계 3위</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

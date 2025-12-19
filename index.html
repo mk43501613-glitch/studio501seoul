@@ -9,6 +9,21 @@
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    /* ✅ 여기: 전체 폭(대열) 제한 */
+    .container {
+      max-width: 1180px;     /* ← 원하는 폭: 1000~1300 사이로 조절 */
+      margin: 48px auto;     /* 가운데 정렬 */
+      padding: 0 24px;       /* 화면 좁을 때 양옆 여백 */
+      outline: 2px solid red;/* ✅ 테스트용: 폭 확인되면 지워 */
+      outline-offset: 6px;
+    }
+
     .site-header {
       display: flex;
       justify-content: space-between;
@@ -17,32 +32,21 @@
     }
 
     .logo {
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #111;
-}
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: #111;
+    }
 
-.nav {
-  display: flex;
-  gap: 20px;
-}
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
 
-.nav a {
-  font-size: 13px;
-  text-decoration: none;
-  color: #111;
-}
-
-.nav a.active {
-  font-weight: 600;
-}
-
-
-    body {
-      margin: 48px;
-      font-family: Arial, sans-serif;
-      background: #fff;
+    .nav a {
+      font-size: 13px;
+      text-decoration: none;
+      color: #111;
     }
 
     .grid {
@@ -88,53 +92,53 @@
 
 <body>
 
-<div class="container">
+  <!-- ✅ header + grid 둘 다 container 안에 있어야 “폭”이 같이 제한됨 -->
+  <div class="container">
 
-  <header class="site-header">
-    <a href="/" class="logo">studio501</a>
+    <header class="site-header">
+      <a href="/" class="logo">studio501</a>
 
-    <nav class="nav">
-      <a href="/" class="active">Projects</a>
-      <a href="/about.html">About</a>
-    </nav>
+      <nav class="nav">
+        <a href="/" class="active">Projects</a>
+        <a href="/about.html">About</a>
+      </nav>
 
-    <div></div>
-  </header>
+      <div></div>
+    </header>
 
-<div class="grid">
+    <div class="grid">
 
-  <!-- 덕양중 -->
-  <a class="project" href="projects/deokyang.html">
-    <div class="thumb">
-      <img src="images/deokyang-thumb.jpg" alt="">
-      <div class="project-title">덕양중학교 공간재구조화 리모델링 및 증축</div>
+      <a class="project" href="projects/deokyang.html">
+        <div class="thumb">
+          <img src="images/deokyang-thumb.jpg" alt="덕양중학교 공간재구조화 리모델링 및 증축">
+          <div class="project-title">덕양중학교 공간재구조화 리모델링 및 증축</div>
+        </div>
+      </a>
+
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/samsang-thumb.jpg" alt="삼상초등학교 공간재구조화 리모델링 및 급식실 증개축">
+          <div class="project-title">삼상초등학교 공간재구조화 리모델링 및 급식실 증개축</div>
+        </div>
+      </a>
+
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/fire-safety-thumb.jpg" alt="한국소방안전원 스튜디오 공사">
+          <div class="project-title">한국소방안전원 스튜디오 공사</div>
+        </div>
+      </a>
+
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/airportdong-thumb.jpg" alt="공항동 다가구 상가주택">
+          <div class="project-title">공항동 다가구 상가주택</div>
+        </div>
+      </a>
+
     </div>
-  </a>
 
-  <!-- 삼상초 (thumbnail only) -->
-  <a class="project" href="javascript:void(0)">
-    <div class="thumb">
-      <img src="images/samsang-thumb.jpg" alt="">
-      <div class="project-title">삼상초등학교 공간재구조화 리모델링 및 급식실 증개축</div>
-    </div>
-  </a>
+  </div>
 
-  <!-- 한국소방안전원 스튜디오 공사 (thumbnail only) -->
-  <a class="project" href="javascript:void(0)">
-    <div class="thumb">
-      <img src="images/fire-safety-thumb.jpg" alt="">
-      <div class="project-title">한국소방안전원 스튜디오 공사</div>
-    </div>
-  </a>
-
-  <!-- 공항동 다가구 상가주택 (thumbnail only) -->
-  <a class="project" href="javascript:void(0)">
-    <div class="thumb">
-      <img src="images/airportdong-thumb.jpg" alt="">
-      <div class="project-title">공항동 다가구 상가주택</div>
-    </div>
-  </a>
-
-</div>
 </body>
 </html>

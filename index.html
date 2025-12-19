@@ -69,39 +69,38 @@
       background:#f2f2f2;
     }
 
-/* 1) 기본: 이미지 흑백 + 타이틀 숨김 */
+/* 기본 상태 */
 .thumb img{
   width:100%;
   height:100%;
   object-fit:cover;
-  transition: transform .4s ease, filter .35s ease;
-  filter: grayscale(100%);
+  transition: filter .35s ease, transform .35s ease;
 }
 
 .project-title{
   position:absolute;
-  bottom:12px;
-  left:12px;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
   font-size:14px;
-  background:rgba(255,255,255,.85);
-  padding:4px 8px;
+  letter-spacing:0.02em;
+  color:#111;
+  background:rgba(255,255,255,0.85);
+  padding:6px 12px;
 
-  opacity:0;                 /* 숨김 */
-  transform: translateY(6px); /* 살짝 아래 */
-  transition: opacity .25s ease, transform .25s ease;
+  opacity:0;
+  transition: opacity .25s ease;
 }
 
-/* 2) hover: 컬러로 + 타이틀 나타남 */
+/* hover 상태 */
 .project:hover .thumb img{
-  filter: grayscale(0%);
-  transform: scale(1.05);
+  filter: brightness(0.92) contrast(0.95);
+  /* 살짝 눌리는 느낌 */
 }
 
 .project:hover .project-title{
   opacity:1;
-  transform: translateY(0);
-}
-  </style>
+}  </style>
 </head>
 
 <body>

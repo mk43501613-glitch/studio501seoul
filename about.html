@@ -12,13 +12,14 @@
       color:#111;
     }
 
-    /* 홈/프로젝트와 동일 */
+    /* 홈/프로젝트와 동일: 대열 폭 */
     .container{
       max-width:1180px;
       margin:48px auto;
       padding:0 24px;
     }
 
+    /* 상단 헤더: 로고 왼쪽, 메뉴 오른쪽 (동일) */
     .site-header{
       display:grid;
       grid-template-columns: 1fr auto;
@@ -48,90 +49,89 @@
       font-weight:600;
     }
 
-    /* About 레이아웃 */
-    .about-wrap{
-      max-width:720px;     /* About 본문 폭(읽기 좋게) */
-      line-height:1.7;
+    /* ✅ About 4분할 레이아웃 */
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr; /* 좌/우 */
+      gap:56px 120px;                /* 행 간격 / 열 간격(원하면 줄여) */
+      align-items:start;
     }
 
-    .about-title{
-      font-size:20px;
-      margin:0 0 16px 0;
-      font-weight:600;
-    }
-
-    .section{
-      margin-top:32px;
-    }
-
-    .section h2{
+    /* 각 블록 스타일 */
+    .block-title{
       font-size:13px;
+      font-weight:600;
       margin:0 0 10px 0;
-      font-weight:600;
-      letter-spacing:0.02em;
     }
 
-    .muted{
-      color:#666;
-      font-size:13px;
+    .block{
+      font-size:14px;
+      line-height:1.6;
     }
 
-    ul{
+    .block p{ margin:0 0 8px 0; }
+
+    .list{
       margin:0;
       padding-left:18px;
     }
 
-    li{
-      margin:6px 0;
+    .list li{
+      margin:8px 0;
+    }
+
+    /* 모바일에서는 1열로 */
+    @media (max-width: 820px){
+      .about-grid{
+        grid-template-columns: 1fr;
+        gap:36px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <header class="site-header">
+      <a href="/" class="logo">studio501</a>
+      <nav class="nav">
+        <a href="/">Projects</a>
+        <a href="/about.html" class="active">About</a>
+      </nav>
+    </header>
 
-  <header class="site-header">
-    <a href="/" class="logo">studio501</a>
-    <nav class="nav">
-      <a href="/" >Projects</a>
-      <a href="/about.html" class="active">About</a>
-    </nav>
-  </header>
+    <!-- ✅ 빨간선처럼 2x2 -->
+    <main class="about-grid">
 
-<main class="about-grid">
+      <!-- 좌상: Office -->
+      <section class="block">
+        <h2 class="block-title">Office</h2>
+        <p>tel. 0507.1327.4317</p>
+        <p>email. astudio501@naver.com</p>
+        <p>서울 강서구 공항대로213 (보타닉파크타워II 8F) 801호</p>
+      </section>
 
-  <!-- LEFT TOP : OFFICE -->
-  <section class="section">
-    <div class="section-title">Office</div>
-    <div>tel. 0507.1327.4317</div>
-    <div>email. astudio501@naver.com</div>
-    <div>서울 강서구 공항대로213 (보타닉파크타워II 8F) 801호</div>
-  </section>
+      <!-- 우상: Principal Architect -->
+      <section class="block">
+        <h2 class="block-title">Principal Architect</h2>
+        <p><strong>김민규 / 대표, 건축사</strong></p>
+        <p>Registered Architect, Korea</p>
+        <p>공공건축과 교육시설을 중심으로 한 공간재구조화 및 리모델링 프로젝트를 수행</p>
+      </section>
 
-  <!-- RIGHT TOP : PRINCIPAL -->
-  <section class="section">
-    <div class="section-title">Principal Architect</div>
-    <div><strong>김민규 / 대표,건축사</strong></div>
-    <div class="muted">Registered Architect, Korea</div>
-    <div>
-      공공건축과 교육시설을 중심으로 한  
-      공간재구조화 및 리모델링 프로젝트를 수행
-    </div>
-  </section>
+      <!-- 좌하: Awards -->
+      <section class="block">
+        <h2 class="block-title">Awards</h2>
+        <ul class="list">
+          <li>2025 경기도공간재구조화 최우수(리모델링부문)-덕양중학교</li>
+        </ul>
+      </section>
 
-  <!-- LEFT BOTTOM : AWARDS -->
-  <section class="section">
-    <div class="section-title">Awards</div>
-    <ul>
-      <li>2025 경기도공간재구조화 최우수(리모델링부문)-덕양중학교</li>
-    </ul>
-  </section>
-
-  <!-- RIGHT BOTTOM : COMPETITION -->
-  <section class="section">
-    <div class="section-title">Competition</div>
-    <ul>
+      <!-- 우하: Competition -->
+      <section class="block">
+        <h2 class="block-title">Competition</h2>
+        <ul class="list">
         <li>2025 부용초 공간재구조화 리모델링 현상설계 5위</li>
         <li>2025 마장고 공간재구조화 리모델링 현상설계 2위</li>
         <li>2025 장평중 그린스마트미래학교 리모델링 5위</li>
@@ -152,10 +152,11 @@
         <li>2021 가양도서관 분관 리모델링 현상설계 5위</li>
         <li>2021 김포시 국궁장 현상설계 3위</li>
         <li>2021 부안예술공방 조성사업 현상설계 3위</li>
-    </ul>
-  </section>
+        </ul>
+      </section>
 
-</main>
+    </main>
 
+  </div>
 </body>
 </html>

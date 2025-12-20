@@ -2,8 +2,27 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ✅ 검색 결과(탭/구글) 제목 -->
   <title>건축사사무소 스튜디오501</title>
 
+  <!-- ✅ 검색 결과 설명(스니펫) -->
+  <meta name="description" content="건축사사무소 스튜디오501. 학교 공간재구조화, 리모델링 및 증·개축, 공공건축 프로젝트를 수행합니다." />
+
+  <!-- ✅ canonical (중복 URL 방지) -->
+  <link rel="canonical" href="https://studio501seoul.com/" />
+
+  <!-- ✅ OG (공유/검색 보강) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="건축사사무소 스튜디오501" />
+  <meta property="og:title" content="건축사사무소 스튜디오501" />
+  <meta property="og:description" content="학교 공간재구조화, 리모델링 및 증·개축, 공공건축 프로젝트를 수행합니다." />
+  <meta property="og:url" content="https://studio501seoul.com/" />
+  <!-- 필요하면 대표 이미지로 교체 -->
+  <meta property="og:image" content="https://studio501seoul.com/images/deokyang-thumb.jpg" />
+
+  <!-- favicon (cache busting) -->
   <link rel="icon" href="/favicon.ico?v=99" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
@@ -12,6 +31,7 @@
       margin:0;
       font-family: Arial, sans-serif;
       background:#fff;
+      color:#111;
     }
 
     /* 공통 대열 */
@@ -60,7 +80,10 @@
       gap:32px;
     }
 
-    .project{ text-decoration:none; color:#000; }
+    .project{
+      text-decoration:none;
+      color:#000;
+    }
 
     .thumb{
       position:relative;
@@ -69,151 +92,130 @@
       background:#f2f2f2;
     }
 
-/* 기본 상태 */
-.thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition: filter .35s ease, transform .35s ease;
-}
+    /* 이미지 기본 */
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition: filter .35s ease, transform .35s ease;
+    }
 
-/* 기본 이미지 상태 */
-.thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+    /* 타이틀 기본 (숨김) */
+    .project-title{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
 
-  transition:
-    filter .35s ease,
-    transform .35s ease;
-}
+      background:none;
+      padding:0;
 
-/* 타이틀 기본 상태 (숨김) */
-.project-title{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform: translate(-50%, -50%);
+      font-size:15px;
+      font-weight:500;
+      letter-spacing:0.02em;
+      line-height:1.4;
+      color:#fff;
 
-  background:none;           /* 흰 박스 제거 */
-  padding:0;
+      text-align:center;
+      max-width:80%;
 
-  font-size:15px;
-  font-weight:500;
-  letter-spacing:0.02em;
-  line-height:1.4;
-  color:#fff;                /* 흰 글자 */
+      opacity:0;
+      transition: opacity .25s ease;
 
-  text-align:center;
-  max-width:80%;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    }
 
-  opacity:0;
-  transition: opacity .25s ease;
+    /* hover 효과 */
+    .project:hover .thumb img{
+      filter: blur(3px) brightness(0.9);
+      transform: scale(1.03);
+    }
 
-  text-shadow:
-    0 2px 10px rgba(0,0,0,0.45);
-}
+    .project:hover .project-title{
+      opacity:1;
+    }
 
-/* hover 시 이미지 흐림 */
-.project:hover .thumb img{
-  filter: blur(3px) brightness(0.9);
-  transform: scale(1.03);
-}
-
-/* hover 시 타이틀 표시 */
-.project:hover .project-title{
-  opacity:1;
-}
-
-
-.project:hover .project-title{
-  opacity:1;
-}  
-
-@media (hover: none){
-  .project-title{
-    opacity:1;
-  }
-  .thumb img{
-    filter:none;
-    transform:none;
-  }
-}
-
-
-</style>
+    /* 모바일/터치(hover 없음) 대응: 제목 항상 보이게 */
+    @media (hover: none){
+      .project-title{
+        opacity:1;
+      }
+      .thumb img{
+        filter:none;
+        transform:none;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <header class="site-header">
+      <a href="/" class="logo">건축사사무소 스튜디오501</a>
+      <nav class="nav">
+        <a href="/" class="active">Projects</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </header>
 
-  <header class="site-header">
-    <a href="/" class="logo">건축사사무소 스튜디오501</a>
-    <nav class="nav">
-      <a href="/" class="active">Projects</a>
-      <a href="/about.html">About</a>
-    </nav>
-  </header>
+    <div class="grid">
 
-  <div class="grid">
+      <a class="project" href="projects/deokyang.html">
+        <div class="thumb">
+          <img src="images/deokyang-thumb.jpg" alt="덕양중학교 공간재구조화 리모델링 및 증축">
+          <div class="project-title">덕양중학교 공간재구조화 리모델링 및 증축</div>
+        </div>
+      </a>
 
-    <a class="project" href="projects/deokyang.html">
-      <div class="thumb">
-        <img src="images/deokyang-thumb.jpg" alt="덕양중학교 공간재구조화 리모델링 및 증축">
-        <div class="project-title">덕양중학교 공간재구조화 리모델링 및 증축</div>
-      </div>
-    </a>
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/samsang-thumb.jpg" alt="삼상초등학교 공간재구조화 리모델링 및 급식실 증개축">
+          <div class="project-title">삼상초등학교 공간재구조화 리모델링 및 급식실 증개축</div>
+        </div>
+      </a>
 
-    <a class="project" href="javascript:void(0)">
-      <div class="thumb">
-        <img src="images/samsang-thumb.jpg" alt="">
-        <div class="project-title">삼상초등학교 공간재구조화 리모델링 및 급식실 증개축</div>
-      </div>
-    </a>
+      <!-- 원덕초 -->
+      <a class="project" href="projects/wondeok.html">
+        <div class="thumb">
+          <img src="images/wondeok-thumb.jpg" alt="원덕초 그린스마트미래학교 증개축">
+          <div class="project-title">원덕초 그린스마트미래학교 증개축</div>
+        </div>
+      </a>
 
-<!-- 원덕초 -->
-<a class="project" href="projects/wondeok.html">
-  <div class="thumb">
-    <img src="images/wondeok-thumb.jpg" alt="Wondeok Elementary School">
-    <div class="project-title">원덕초 그린스마트미래학교 증개축</div>
+      <!-- 의령여중 -->
+      <a class="project" href="projects/uiryeong.html">
+        <div class="thumb">
+          <img src="images/uiryeong-thumb.jpg" alt="의령여중 미래학교 본관동 개축">
+          <div class="project-title">의령여중 미래학교 본관동 개축</div>
+        </div>
+      </a>
+
+      <!-- 금당초 -->
+      <a class="project" href="projects/geumdang.html">
+        <div class="thumb">
+          <img src="images/geumdang-thumb.jpg" alt="금당초등학교 공간재구조화">
+          <div class="project-title">금당초등학교 공간재구조화</div>
+        </div>
+      </a>
+
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/fire-safety-thumb.jpg" alt="한국소방안전원 온라인스튜디오">
+          <div class="project-title">한국소방안전원 온라인스튜디오</div>
+        </div>
+      </a>
+
+      <a class="project" href="javascript:void(0)">
+        <div class="thumb">
+          <img src="images/airportdong-thumb.jpg" alt="공항동 다가구 상가주택">
+          <div class="project-title">공항동 다가구 상가주택</div>
+        </div>
+      </a>
+
+    </div>
+
   </div>
-</a>
-
-<!-- 의령여중 -->
-<a class="project" href="projects/uiryeong.html">
-  <div class="thumb">
-    <img src="images/uiryeong-thumb.jpg" alt="Uiryeong Girls’ Middle School">
-    <div class="project-title">의령여중 미래학교 본관동 개축</div>
-  </div>
-</a>
-
-<!-- 금당초 -->
-<a class="project" href="projects/geumdang.html">
-  <div class="thumb">
-    <img src="images/geumdang-thumb.jpg" alt="Geumdang Elementary School">
-    <div class="project-title">금당초등학교 공간재구조화</div>
-  </div>
-</a>
-
-    <a class="project" href="javascript:void(0)">
-      <div class="thumb">
-        <img src="images/fire-safety-thumb.jpg" alt="">
-        <div class="project-title">한국소방안전원 온라인스튜디오</div>
-      </div>
-    </a>
-
-    <a class="project" href="javascript:void(0)">
-      <div class="thumb">
-        <img src="images/airportdong-thumb.jpg" alt="">
-        <div class="project-title">공항동 다가구 상가주택</div>
-      </div>
-    </a>
-
-  </div>
-
-</div>
-
 </body>
 </html>

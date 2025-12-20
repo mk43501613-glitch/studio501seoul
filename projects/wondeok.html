@@ -2,15 +2,24 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>원덕초 그린스마트미래학교 증개축공사 | studio501</title>
+  <title>원덕초 그린스마트미래학교 증개축공사 | 건축사사무소 스튜디오501</title>
 
   <link rel="icon" href="/favicon.ico?v=99" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
-
   <style>
-    body{ margin:0; font-family:Arial,sans-serif; }
-    .container{ max-width:1180px; margin:48px auto; padding:0 24px; }
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#fff;
+      color:#111;
+    }
+
+    .container{
+      max-width:1180px;
+      margin:48px auto;
+      padding:0 24px;
+    }
 
     .site-header{
       display:grid;
@@ -19,17 +28,50 @@
       margin-bottom:56px;
     }
 
-    .logo{ text-decoration:none; color:#111; font-size:14px; }
-    .nav{ display:flex; gap:20px; }
-    .nav a{ font-size:13px; text-decoration:none; color:#111; }
+    .logo{
+      text-decoration:none;
+      color:#111;
+      font-size:14px;
+      letter-spacing:0.04em;
+    }
 
-    h1{ font-size:20px; margin-bottom:12px; }
-    .meta{ font-size:12px; color:#666; margin-bottom:32px; }
+    .nav{
+      display:flex;
+      gap:20px;
+    }
+
+    .nav a{
+      font-size:13px;
+      text-decoration:none;
+      color:#111;
+    }
+
+    h1{
+      font-size:20px;
+      margin:0 0 12px 0;
+      font-weight:600;
+    }
+
+    .meta{
+      font-size:12px;
+      color:#666;
+      margin-bottom:24px;
+    }
+
+    /* ✅ 여기서 텍스트 톤 통일 (의령중처럼) */
+    .project-desc{
+      max-width:680px;        /* 폭 제한 → 길게 안 보임 */
+      font-size:14px;         /* 글자 크기 통일 */
+      line-height:1.75;       /* 읽기 좋게 */
+      margin-bottom:48px;
+      white-space:pre-line;   /* 지금처럼 줄바꿈 유지 */
+    }
 
     .gallery img{
       width:100%;
-      margin-bottom:48px;
+      height:auto;
       display:block;
+      margin-bottom:48px;
     }
   </style>
 </head>

@@ -1,138 +1,219 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>덕양중학교 공간재구조화 및 증축공사 | 건축사사무소 스튜디오501</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    덕양중학교 공간재구조화 및 증축공사 | 건축사사무소 스튜디오501
+  </title>
 
   <link rel="icon" href="/favicon.ico?v=99" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
   <style>
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       margin:0;
-      font-family: Arial, sans-serif;
+      font-family:Arial, "Malgun Gothic", sans-serif;
       background:#fff;
       color:#111;
     }
 
+    /*
+      인덱스 페이지와 동일
+      왼쪽 40px / 위쪽 44px / 최대 폭 1600px
+    */
     .container{
-      max-width:1180px;
-      margin:48px auto;
-      padding:0 24px;
+      width:calc(100% - 80px);
+      max-width:1600px;
+      margin:44px 0 80px 40px;
+      padding:0;
     }
 
+    /* 상단 로고 */
     .site-header{
-      display:grid;
-      grid-template-columns: 1fr auto;
-      align-items:center;
-      margin-bottom:56px;
+      margin:0 0 52px;
     }
 
     .logo{
+      display:inline-block;
+      color:#111;
       font-size:14px;
-      letter-spacing:0.04em;
-      text-decoration:none;
-      color:#111;
-    }
-
-    .nav{
-      display:flex;
-      gap:20px;
-    }
-
-    .nav a{
-      font-size:13px;
-      text-decoration:none;
-      color:#111;
-    }
-
-    .project-title{
-      font-size:20px;
-      margin:0 0 12px 0;
       font-weight:600;
+      letter-spacing:-0.02em;
+      text-decoration:none;
+    }
+
+    .logo:hover{
+      opacity:0.55;
+    }
+
+    /* 프로젝트 제목 */
+    .project-title{
+      margin:0 0 10px;
+      font-size:20px;
+      font-weight:600;
+      line-height:1.4;
+      letter-spacing:-0.025em;
     }
 
     .project-meta{
-      font-size:12px;
+      margin:0 0 28px;
       color:#666;
-      margin-bottom:24px;
-    }
-
-    .project-desc{
-      max-width:640px;
+      font-size:12px;
       line-height:1.6;
-      margin-bottom:48px;
-      font-size:14px;
     }
 
-    /* ✅ 갤러리 스타일 (이게 핵심) */
+    /* 설명 */
+    .project-desc{
+      width:640px;
+      max-width:100%;
+      margin:0 0 48px;
+      font-size:14px;
+      line-height:1.7;
+      letter-spacing:-0.02em;
+      word-break:keep-all;
+    }
+
+    .project-desc p{
+      margin:0 0 20px;
+    }
+
+    .project-desc p:last-child{
+      margin-bottom:0;
+    }
+
+    /* 이미지 갤러리 */
+    .project-gallery{
+      width:100%;
+    }
+
     .project-gallery img{
+      display:block;
       width:100%;
       height:auto;
-      display:block;
-      margin-bottom:48px;   /* 이미지 사이 간격 */
+      margin:0 0 48px;
+    }
+
+    .project-gallery img:last-child{
+      margin-bottom:0;
+    }
+
+    /* 모바일 */
+    @media (max-width:820px){
+      .container{
+        width:calc(100% - 48px);
+        margin:28px 24px 60px;
+      }
+
+      .site-header{
+        margin-bottom:44px;
+      }
+
+      .project-title{
+        font-size:18px;
+      }
+
+      .project-desc{
+        font-size:13px;
+        line-height:1.7;
+      }
+
+      .project-gallery img{
+        margin-bottom:24px;
+      }
     }
   </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-  <header class="site-header">
-    <a href="/" class="logo">건축사사무소 스튜디오501</a>
-    <nav class="nav">
-      <a href="/">Projects</a>
-      <a href="/about.html">About</a>
-    </nav>
-  </header>
+    <header class="site-header">
+      <a href="/" class="logo">
+        건축사사무소 스튜디오501
+      </a>
+    </header>
 
-  <main>
-    <h1 class="project-title">덕양중학교 공간재구조화 리모델링 및 증축공사</h1>
-    <div class="project-meta">Goyang, Gyeonggi, Korea · 2025 · Completed</div>
+    <main>
+      <h1 class="project-title">
+        덕양중학교 공간재구조화 리모델링 및 증축공사
+      </h1>
 
-    <div class="project-desc">
-덕양중학교는 한때 학생 수 감소로 폐교 위기에 놓였으나,
-지역사회와 학교 구성원의 자발적인 참여를 통해 다시 ‘찾아오는 학교’로 변화해온 사례이다.
-교사와 학생 간의 일상적인 소통, 학생·학부모·교직원이 함께 학교 운영에 참여하는 문화는
-덕양중학교만의 개방적이고 자율적인 교육 환경을 형성해왔다.
-  <p>
+      <div class="project-meta">
+        Goyang, Gyeonggi, Korea · 2025 · Completed
+      </div>
 
-본 계획은 이러한 학교 문화가 공간에서도 자연스럽게 드러나도록 하는 데에서 출발하였다.
-실내와 외부의 경계를 최소화하여 교실과 마당, 복도와 공용공간이 유연하게 연결되도록 계획하였으며,
-낮은 창턱과 넓은 개구부를 통해 학생들의 시선과 동선이 자연스럽게 외부로 확장되도록 하였다.
-  <p>
+      <div class="project-desc">
+        <p>
+          덕양중학교는 한때 학생 수 감소로 폐교 위기에 놓였으나,
+          지역사회와 학교 구성원의 자발적인 참여를 통해 다시 ‘찾아오는 학교’로
+          변화해온 사례이다. 교사와 학생 간의 일상적인 소통,
+          학생·학부모·교직원이 함께 학교 운영에 참여하는 문화는
+          덕양중학교만의 개방적이고 자율적인 교육 환경을 형성해왔다.
+        </p>
 
-증축동의 중심에는 2개 층을 관통하는 광장형 공간을 배치하였다.
-이 공간은 특별교실과 도서관을 연결하는 학교의 중심 영역으로,
-공연, 전시, 식사, 독서 등 다양한 활동이 일상적으로 이루어지는 다목적 공간이다.
-학습과 휴식, 교류가 특정 프로그램에 한정되지 않고 유연하게 이루어지도록 계획하였다.
-  <p>
+        <p>
+          본 계획은 이러한 학교 문화가 공간에서도 자연스럽게 드러나도록 하는
+          데에서 출발하였다. 실내와 외부의 경계를 최소화하여 교실과 마당,
+          복도와 공용공간이 유연하게 연결되도록 계획하였으며,
+          낮은 창턱과 넓은 개구부를 통해 학생들의 시선과 동선이 자연스럽게
+          외부로 확장되도록 하였다.
+        </p>
 
-증축동은 낮고 길게 배치하여 주변 환경과 조화를 이루도록 하였으며,
-정문 접근부에는 사선으로 열리는 출입구를 두어 방문 동선을 명확히 하고 학교의 개방적인 인상을 강화하였다.
-출입부는 상부 층과 직접 연결되어 이동의 효율성을 높이고, 내부 공간의 시각적 연속성을 확장한다.
-  <p>
+        <p>
+          증축동의 중심에는 2개 층을 관통하는 광장형 공간을 배치하였다.
+          이 공간은 특별교실과 도서관을 연결하는 학교의 중심 영역으로,
+          공연, 전시, 식사, 독서 등 다양한 활동이 일상적으로 이루어지는
+          다목적 공간이다. 학습과 휴식, 교류가 특정 프로그램에 한정되지 않고
+          유연하게 이루어지도록 계획하였다.
+        </p>
 
-2층과 3층에는 외부 마당과 직접 연결되는 테라스를 마련하여
-학생들이 1층으로 내려오지 않고도 외부 공간을 일상적으로 이용할 수 있도록 하였다.
-수업과 휴식, 실내와 외부의 경계가 완화되며, 자연과 함께하는 학습 환경이 형성된다.
-  <p>
+        <p>
+          증축동은 낮고 길게 배치하여 주변 환경과 조화를 이루도록 하였으며,
+          정문 접근부에는 사선으로 열리는 출입구를 두어 방문 동선을 명확히 하고
+          학교의 개방적인 인상을 강화하였다. 출입부는 상부 층과 직접 연결되어
+          이동의 효율성을 높이고 내부 공간의 시각적 연속성을 확장한다.
+        </p>
 
-기존 교사동은 단열 및 창호 개선을 중심으로 리모델링하여 성능을 보완하였고,
-외장재는 기존 건물의 벽돌 색감과 질감을 계승하여 증축동과의 연속성을 확보하였다.
-이를 통해 학교 전체가 하나의 통합된 공간으로 인식되도록 계획하였다.
-  <p>
+        <p>
+          2층과 3층에는 외부 마당과 직접 연결되는 테라스를 마련하여
+          학생들이 1층으로 내려오지 않고도 외부 공간을 일상적으로 이용할 수
+          있도록 하였다. 수업과 휴식, 실내와 외부의 경계가 완화되며,
+          자연과 함께하는 학습 환경이 형성된다.
+        </p>
 
-본 프로젝트는 단순한 시설 개선을 넘어,
-덕양중학교가 지켜온 교육 문화와 공동체의 가치를 공간적으로 뒷받침하는 학습 환경을 제안하고자 한다.    </div>
+        <p>
+          기존 교사동은 단열 및 창호 개선을 중심으로 리모델링하여 성능을
+          보완하였고, 외장재는 기존 건물의 벽돌 색감과 질감을 계승하여
+          증축동과의 연속성을 확보하였다. 이를 통해 학교 전체가 하나의
+          통합된 공간으로 인식되도록 계획하였다.
+        </p>
 
-    <div class="project-gallery">
-      <img src="../images/deokyang-01.jpg" alt="">
-      <img src="../images/deokyang-02.jpg" alt="">
-    </div>
-  </main>
+        <p>
+          본 프로젝트는 단순한 시설 개선을 넘어,
+          덕양중학교가 지켜온 교육 문화와 공동체의 가치를 공간적으로
+          뒷받침하는 학습 환경을 제안하고자 한다.
+        </p>
+      </div>
 
-</div>
+      <div class="project-gallery">
+        <img
+          src="../images/deokyang-01.jpg"
+          alt="덕양중학교 공간재구조화 전경"
+        >
+
+        <img
+          src="../images/deokyang-02.jpg"
+          alt="덕양중학교 공간재구조화 내부공간"
+        >
+      </div>
+    </main>
+
+  </div>
 </body>
 </html>
-

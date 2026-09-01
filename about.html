@@ -7,90 +7,109 @@
   <link rel="icon" href="/favicon.ico?v=99" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#fff;
-      color:#111;
-    }
+ <style>
+  body{
+    margin:0;
+    font-family:Arial, "Malgun Gothic", sans-serif;
+    background:#fff;
+    color:#111;
+  }
 
-    /* 홈/프로젝트와 동일: 대열 폭 */
+  /* 왼쪽에만 배치 */
+  .container{
+    width:380px;
+    max-width:calc(100% - 48px);
+    margin:44px 0 80px 52px;
+    padding:0;
+  }
+
+  /* 상단 헤더 */
+  .site-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:52px;
+  }
+
+  .logo{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    text-decoration:none;
+    color:#111;
+  }
+
+  .nav{
+    display:flex;
+    gap:16px;
+  }
+
+  .nav a{
+    font-size:12px;
+    text-decoration:none;
+    color:#111;
+  }
+
+  .nav a.active{
+    font-weight:700;
+  }
+
+  /* 기존 2열을 한 열로 변경 */
+  .about-grid{
+    display:flex;
+    flex-direction:column;
+    gap:38px;
+    align-items:stretch;
+  }
+
+  .block{
+    font-size:12px;
+    line-height:1.75;
+    letter-spacing:-0.025em;
+  }
+
+  .block-title{
+    margin:0 0 8px;
+    font-size:12px;
+    font-weight:700;
+  }
+
+  .block p{
+    margin:0 0 4px;
+  }
+
+  /* 동그란 글머리표 대신 참고 이미지처럼 하이픈 사용 */
+  .list{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  .list li{
+    position:relative;
+    margin:4px 0;
+    padding-left:12px;
+  }
+
+  .list li::before{
+    content:"-";
+    position:absolute;
+    left:0;
+    top:0;
+  }
+
+  @media (max-width:600px){
     .container{
-      max-width:1180px;
-      margin:48px auto;
-      padding:0 24px;
+      width:auto;
+      max-width:none;
+      margin:28px 24px 60px;
     }
 
-    /* 상단 헤더: 로고 왼쪽, 메뉴 오른쪽 (동일) */
     .site-header{
-      display:grid;
-      grid-template-columns: 1fr auto;
-      align-items:center;
-      margin-bottom:56px;
+      margin-bottom:44px;
     }
-
-    .logo{
-      font-size:14px;
-      letter-spacing:0.04em;
-      text-decoration:none;
-      color:#111;
-    }
-
-    .nav{
-      display:flex;
-      gap:20px;
-    }
-
-    .nav a{
-      font-size:13px;
-      text-decoration:none;
-      color:#111;
-    }
-
-    .nav a.active{
-      font-weight:600;
-    }
-
-    /* ✅ About 4분할 레이아웃 */
-    .about-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr; /* 좌/우 */
-      gap:56px 120px;                /* 행 간격 / 열 간격(원하면 줄여) */
-      align-items:start;
-    }
-
-    /* 각 블록 스타일 */
-    .block-title{
-      font-size:13px;
-      font-weight:600;
-      margin:0 0 10px 0;
-    }
-
-    .block{
-      font-size:14px;
-      line-height:1.6;
-    }
-
-    .block p{ margin:0 0 8px 0; }
-
-    .list{
-      margin:0;
-      padding-left:18px;
-    }
-
-    .list li{
-      margin:8px 0;
-    }
-
-    /* 모바일에서는 1열로 */
-    @media (max-width: 820px){
-      .about-grid{
-        grid-template-columns: 1fr;
-        gap:36px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>

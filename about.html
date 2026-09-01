@@ -1,134 +1,129 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About | 건축사사무소 스튜디오501</title>
 
   <link rel="icon" href="/favicon.ico?v=99" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png?v=3">
 
- <style>
-  body{
-    margin:0;
-    font-family:Arial, "Malgun Gothic", sans-serif;
-    background:#fff;
-    color:#111;
-  }
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-  /* 왼쪽에만 배치 */
-  .container{
-    width:380px;
-    max-width:calc(100% - 48px);
-    margin:44px 0 80px 52px;
-    padding:0;
-  }
+    body{
+      margin:0;
+      font-family:Arial, "Malgun Gothic", sans-serif;
+      background:#fff;
+      color:#111;
+    }
 
-.container{
-  max-width:1180px;
-  margin:44px 0 80px 40px;
-  padding:0;
-}
-   
-  /* 상단 헤더 */
-  .site-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:52px;
-  }
-
-  .logo{
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:-0.02em;
-    text-decoration:none;
-    color:#111;
-  }
-
-  .nav{
-    display:flex;
-    gap:16px;
-  }
-
-  .nav a{
-    font-size:12px;
-    text-decoration:none;
-    color:#111;
-  }
-
-  .nav a.active{
-    font-weight:700;
-  }
-
-  /* 기존 2열을 한 열로 변경 */
-  .about-grid{
-    display:flex;
-    flex-direction:column;
-    gap:38px;
-    align-items:stretch;
-  }
-
-  .block{
-    font-size:12px;
-    line-height:1.75;
-    letter-spacing:-0.025em;
-  }
-
-  .block-title{
-    margin:0 0 8px;
-    font-size:12px;
-    font-weight:700;
-  }
-
-  .block p{
-    margin:0 0 4px;
-  }
-
-  /* 동그란 글머리표 대신 참고 이미지처럼 하이픈 사용 */
-  .list{
-    margin:0;
-    padding:0;
-    list-style:none;
-  }
-
-  .list li{
-    position:relative;
-    margin:4px 0;
-    padding-left:12px;
-  }
-
-  .list li::before{
-    content:"-";
-    position:absolute;
-    left:0;
-    top:0;
-  }
-
-  @media (max-width:600px){
+    /*
+      페이지의 공통 기준선
+      인덱스 페이지도 이 값을 똑같이 사용
+    */
     .container{
-      width:auto;
-      max-width:none;
-      margin:28px 24px 60px;
+      width:calc(100% - 80px);
+      max-width:1180px;
+      margin:44px 0 80px 40px;
+      padding:0;
     }
 
+    /* 상단 로고 */
     .site-header{
-      margin-bottom:44px;
+      margin:0 0 52px;
     }
-  }
-</style>
+
+    .logo{
+      display:inline-block;
+      color:#111;
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:-0.02em;
+      text-decoration:none;
+    }
+
+    .logo:hover{
+      opacity:0.55;
+    }
+
+    /* About 내용은 왼쪽의 좁은 한 열로 배치 */
+    .about-grid{
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      width:380px;
+      max-width:100%;
+      gap:38px;
+    }
+
+    .block{
+      font-size:12px;
+      line-height:1.75;
+      letter-spacing:-0.025em;
+    }
+
+    .block-title{
+      margin:0 0 8px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .block p{
+      margin:0 0 4px;
+    }
+
+    /* 하이픈 형태의 목록 */
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .list li{
+      position:relative;
+      margin:4px 0;
+      padding-left:12px;
+    }
+
+    .list li::before{
+      content:"-";
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    /* 모바일 */
+    @media (max-width:600px){
+      .container{
+        width:calc(100% - 48px);
+        margin:28px 24px 60px;
+      }
+
+      .site-header{
+        margin-bottom:44px;
+      }
+
+      .about-grid{
+        width:100%;
+        gap:34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
 
-<header class="site-header">
-  <a href="/" class="logo">건축사사무소 스튜디오501</a>
-</header>
+    <header class="site-header">
+      <a href="/" class="logo">건축사사무소 스튜디오501</a>
+    </header>
 
-    <!-- ✅ 빨간선처럼 2x2 -->
     <main class="about-grid">
 
-      <!-- 좌상: Office -->
       <section class="block">
         <h2 class="block-title">Office</h2>
         <p>tel. 0507.1327.4317</p>
@@ -136,53 +131,49 @@
         <p>서울 강서구 공항대로213 (보타닉파크타워II 8F) 801호</p>
       </section>
 
-      <!-- 우상: Principal Architect -->
       <section class="block">
         <h2 class="block-title">Principal Architect</h2>
         <p><strong>김민규 / 소장, 건축사(KIRA)</strong></p>
         <p>Registered Architect, Korea</p>
       </section>
 
-      <!-- 좌하: Awards -->
       <section class="block">
         <h2 class="block-title">Awards</h2>
+
         <ul class="list">
           <li>2025 경기도공간재구조화 최우수(리모델링부문)-덕양중학교</li>
           <li>2025 대한민국우수교육시설 우수(리모델링부문)-덕양중학교</li>
-
         </ul>
       </section>
 
-      <!-- 우하: Competition -->
       <section class="block">
         <h2 class="block-title">Competition</h2>
+
         <ul class="list">
-        <li>2025 부용초 공간재구조화 리모델링 현상설계 5위</li>
-        <li>2025 마장고 공간재구조화 리모델링 현상설계 2위</li>
-        <li>2025 장평중 그린스마트미래학교 리모델링 5위</li>
-        <li>2025 신남초 본관동 공간재구조화 개축 현상설계 3위</li>
-        <li>2025 금당초 본관동 재난위험시설 개축 현상설계 3위</li>
-        <li>2024 하성고 기숙사 증축 현상설계 5위</li>
-        <li>2024 삼상초 공간재구조화 리모델링 현상설계 당선</li>
-        <li>2024 전곡중 공간재구조화 리모델링 현상설계 2위</li>
-        <li>2024 평창지역자활센터 현상설계 4위</li>
-        <li>2024 원덕초 그린스마트미래학교 증개축 현상설계 2위</li>
-        <li>2023 성남서중 급식실 증축 현상설계 5위</li>
-        <li>2022 덕양중 그린스마트미래학교 현상설계 당선</li>
-        <li>2022 파주초 그린스마트미래학교 현상설계 4위</li>
-        <li>2022 세마중 교실증축 현상설계 3위</li>
-        <li>2022 포곡중 급식소 증축 현상설계 3위</li>
-        <li>2022 창신초 교사증축 현상설계 3위</li>
-        <li>2021 개림초 다목적강당 및 급식실 증축 현상설계 4위</li>
-        <li>2021 가양도서관 분관 리모델링 현상설계 5위</li>
-        <li>2021 김포시 국궁장 현상설계 3위</li>
-        <li>2021 부안예술공방 조성사업 현상설계 3위</li>
+          <li>2025 부용초 공간재구조화 리모델링 현상설계 5위</li>
+          <li>2025 마장고 공간재구조화 리모델링 현상설계 2위</li>
+          <li>2025 장평중 그린스마트미래학교 리모델링 5위</li>
+          <li>2025 신남초 본관동 공간재구조화 개축 현상설계 3위</li>
+          <li>2025 금당초 본관동 재난위험시설 개축 현상설계 3위</li>
+          <li>2024 하성고 기숙사 증축 현상설계 5위</li>
+          <li>2024 삼상초 공간재구조화 리모델링 현상설계 당선</li>
+          <li>2024 전곡중 공간재구조화 리모델링 현상설계 2위</li>
+          <li>2024 평창지역자활센터 현상설계 4위</li>
+          <li>2024 원덕초 그린스마트미래학교 증개축 현상설계 2위</li>
+          <li>2023 성남서중 급식실 증축 현상설계 5위</li>
+          <li>2022 덕양중 그린스마트미래학교 현상설계 당선</li>
+          <li>2022 파주초 그린스마트미래학교 현상설계 4위</li>
+          <li>2022 세마중 교실증축 현상설계 3위</li>
+          <li>2022 포곡중 급식소 증축 현상설계 3위</li>
+          <li>2022 창신초 교사증축 현상설계 3위</li>
+          <li>2021 개림초 다목적강당 및 급식실 증축 현상설계 4위</li>
+          <li>2021 가양도서관 분관 리모델링 현상설계 5위</li>
+          <li>2021 김포시 국궁장 현상설계 3위</li>
+          <li>2021 부안예술공방 조성사업 현상설계 3위</li>
         </ul>
       </section>
 
     </main>
-
   </div>
 </body>
-
 </html>

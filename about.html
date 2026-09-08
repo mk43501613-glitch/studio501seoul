@@ -83,11 +83,18 @@
       list-style:none;
     }
 
-    .list li{
-      position:relative;
-      margin:4px 0;
-      padding-left:12px;
-    }
+.list li{
+  position:relative;
+  display:flex;
+  margin:4px 0;
+  padding-left:12px;
+}
+
+.list .date{
+  display:inline-block;
+  width:62px;
+  flex-shrink:0;
+}
 
     .list li::before{
       content:"-";
@@ -139,29 +146,29 @@
       <section class="block">
         <h2 class="block-title">News</h2>
 
-        <ul class="list">
-          <li>2026.8   덕정초 공간재구조화 개축 및 리모델링 현상설계 3위</li>
-          <li>2026.3   삼상초 공간재구조화공사 착공</li>
-          <li>2026.3   경기도교육청 광주도서관 공간재구조화 현상설계 3위</li>
-          <li>2025.12  대한민국우수교육시설 우수(리모델링부문)-덕양중학교</li>
-          <li>2025.11  경기도공간재구조화 최우수(리모델링부문)-덕양중학교</li>
-          <li>2025.9   마장고 공간재구조화 리모델링 현상설계 2위</li>
-          <li>2025.6   신남초 본관동 공간재구조화 개축 현상설계 3위</li>
-          <li>2025.4   금당초 본관동 재난위험시설 개축 현상설계 3위</li>
-          <li>2024.8   삼상초 공간재구조화 리모델링 현상설계 당선</li>
-          <li>2024.4   평창지역자활센터 현상설계 4위</li>
-          <li>2024.2   원덕초 그린스마트미래학교 증개축 현상설계 2위</li>
-          <li>2023.9   스튜디오501 이전(마곡동)</li>
-          <li>2023.7   덕양중 그린스마트미래학교 착공</li>
-          <li>2022.11  덕양중 그린스마트미래학교 현상설계 당선</li>
-          <li>2022.10  파주초 그린스마트미래학교 현상설계 4위</li>
-          <li>2022.9   세마중 교실증축 현상설계 3위</li>
-          <li>2022.8   창신초 교사증축 현상설계 3위</li>
-          <li>2021.6   개림초 다목적강당 및 급식실 증축 현상설계 4위</li>
-          <li>2021.4   가양도서관 분관 리모델링 현상설계 5위</li>
-          <li>2020.12  스튜디오501 개소(방화동)</li>
+<ul class="list">
+  <li><span class="date">2026.8</span>덕정초 공간재구조화 개축 및 리모델링 현상설계 3위</li>
+  <li><span class="date">2026.3</span>삼상초 공간재구조화공사 착공</li>
+  <li><span class="date">2026.3</span>경기도교육청 광주도서관 공간재구조화 현상설계 3위</li>
+  <li><span class="date">2025.12</span>대한민국우수교육시설 우수(리모델링부문)-덕양중학교</li>
+  <li><span class="date">2025.11</span>경기도공간재구조화 최우수(리모델링부문)-덕양중학교</li>
+  <li><span class="date">2025.9</span>마장고 공간재구조화 리모델링 현상설계 2위</li>
+  <li><span class="date">2025.6</span>신남초 본관동 공간재구조화 개축 현상설계 3위</li>
+  <li><span class="date">2025.4</span>금당초 본관동 재난위험시설 개축 현상설계 3위</li>
+  <li><span class="date">2024.8</span>삼상초 공간재구조화 리모델링 현상설계 당선</li>
+  <li><span class="date">2024.4</span>평창지역자활센터 현상설계 4위</li>
+  <li><span class="date">2024.2</span>원덕초 그린스마트미래학교 증개축 현상설계 2위</li>
+  <li><span class="date">2023.9</span>스튜디오501 이전(마곡동)</li>
+  <li><span class="date">2023.7</span>덕양중 그린스마트미래학교 착공</li>
+  <li><span class="date">2022.11</span>덕양중 그린스마트미래학교 현상설계 당선</li>
+  <li><span class="date">2022.10</span>파주초 그린스마트미래학교 현상설계 4위</li>
+  <li><span class="date">2022.9</span>세마중 교실증축 현상설계 3위</li>
+  <li><span class="date">2022.8</span>창신초 교사증축 현상설계 3위</li>
+  <li><span class="date">2021.6</span>개림초 다목적강당 및 급식실 증축 현상설계 4위</li>
+  <li><span class="date">2021.4</span>가양도서관 분관 리모델링 현상설계 5위</li>
+  <li><span class="date">2020.12</span>스튜디오501 개소(방화동)</li>
+</ul>
 
-        </ul>
       </section>
 
     </main>
